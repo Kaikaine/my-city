@@ -1,5 +1,7 @@
 import React from 'react';
 import {Tag} from '../../utils/misc'
+import Blocks from './Blocks'
+
 const Matches = () => {
     return ( 
     <div className='home_matches_wrapper'>
@@ -14,6 +16,8 @@ const Matches = () => {
             >
             Matches
             </Tag>
+
+            <Blocks />
 
             <Tag
             bck='#fff'
