@@ -4,13 +4,14 @@ import {Switch, Route} from 'react-router-dom'
 import Home from './components/home/index';
 import SignIn from './components/signin/index';
 import Dashboard from './components/admin/Dashboard';
+import PrivateRoute from './components/authRoutes/privateRoutes'
 
-
-const Routes = () => {
+const Routes = (props) => {
   return ( 
   <Layout>
     <Switch>
-      <Route exact path='/dashboard' component={Dashboard} />
+
+      <PrivateRoute {...props} exact path='/dashboard' component={Dashboard}  />
       <Route exact path='/sign_in' component={SignIn} />
       <Route exact path='/' component={Home} />
     </Switch>
