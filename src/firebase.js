@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/app";
 import "firebase/database";
+import "firebase/auth";
 const key = require('./config/key').key
 
 const config = {
