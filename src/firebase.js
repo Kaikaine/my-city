@@ -2,6 +2,8 @@ import firebase from "firebase/app";
 import "firebase/app";
 import "firebase/database";
 import "firebase/auth";
+import 'firebase/storage'
+
 const key = require('./config/key').key
 
 const config = {

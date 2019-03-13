@@ -32,7 +32,7 @@ class Fileuploader extends Component {
             isUploading:false
         });
 
-        firebase.database().storage().ref(this.props.dir)
+        firebase.storage().ref(this.props.dir)
         .child(filename).getDownloadURL()
         .then( url => {
             this.setState({fileURL: url })
@@ -73,7 +73,7 @@ class Fileuploader extends Component {
                             accept="image/*"
                             name="image"
                             randomizeFilename
-                            storageRef={firebase.database().storage().ref(this.props.dir)}
+                            storageRef={firebase.storage().ref(this.props.dir)}
                             onUploadStart={ this.handleUploadStart }
                             onUploadError={ this.handleUploadError }
                             onUploadSuccess={ this.handleUploadSuccess }
@@ -83,7 +83,7 @@ class Fileuploader extends Component {
                 }
                 { this.state.isUploading ?
                     <div className="progress"
-                        style={{textAlign:'center', margin:'30px 0'}}
+                        style={{textAlign:'center', marginTop:'30px'}}
                     >
                         <CircularProgress
                             style={{color:'#98c6e9'}}
