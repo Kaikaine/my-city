@@ -28,5 +28,5 @@ export {
     firebaseMatches,
     firebasePromotions,
     firebaseTeams,
-    firebasePlayers
+    firebasePlayers,
 }
