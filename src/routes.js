@@ -7,15 +7,17 @@ import Home from './components/home/index';
 import SignIn from './components/signin/index';
 import Dashboard from './components/admin/Dashboard';
 import AdminMatches from './components/admin/matches';
-
+import AddEditMatches from './components/admin/matches/AddEditMatches';
 const Routes = (props) => {
   return ( 
   <Layout>
     <Switch>
-      <PrivateRoute {...props} exact path='/admin_matches' component={AdminMatches}  />
-      <PrivateRoute {...props} exact path='/dashboard' component={Dashboard}  />
-      <PublicRoute {...props} restricted={true} path='/sign_in' component={SignIn} />
-      <PublicRoute {...props} restricted={false} path='/' component={Home} />
+            <PrivateRoute {...props} path="/admin_matches/edit_match" exact component={AddEditMatches}/>
+            <PrivateRoute {...props} path="/admin_matches/edit_match/:id" exact component={AddEditMatches}/>
+            <PrivateRoute {...props} path="/admin_matches" exact component={AdminMatches}/>
+            <PrivateRoute {...props} path="/dashboard" exact component={Dashboard}/>
+            <PublicRoute {...props} restricted={true} path="/sign_in" exact component={SignIn}/>
+            <PublicRoute {...props} restricted={false} path="/" exact component={Home}/>
     </Switch>
   </Layout> );
 }
