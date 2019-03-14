@@ -12,6 +12,7 @@ import AddEditPlayers from './components/admin/players/AddEditPlayers';
 import AdminPlayers from './components/admin/players/index';
 import TheTeam from './components/theTeam/index';
 import TheMatches from './components/theMatches/index';
+import NotFound from './components/utils/not_found';
 const Routes = (props) => {
   return ( 
   <Layout>
@@ -27,6 +28,7 @@ const Routes = (props) => {
             <PublicRoute {...props} restricted={false} path="/the_matches" exact component={TheMatches}/>
             <PublicRoute {...props} restricted={false} path="/the_team" exact component={TheTeam}/>
             <PublicRoute {...props} restricted={false} path="/" exact component={Home}/>
+            <PublicRoute {...props} restricted={false} exact component={NotFound}/>
     </Switch>
   </Layout> );
 }
