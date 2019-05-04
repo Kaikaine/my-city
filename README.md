@@ -1,3 +1,7 @@
+Access the admin section by going to https://two-man-8d0dd.firebaseapp.com/sign_in
+email: kairi@gmail.com
+password: kairi123
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
